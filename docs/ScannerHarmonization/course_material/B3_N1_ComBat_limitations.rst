@@ -33,7 +33,6 @@ violations of ComBat’s assumptions and directly evaluate their impact on
 harmonization performance.
 
 **Step 1 — Nonlinear biological effects**
-'''''''''''''''''''''''''''''''''''''''''
 
 We follow Pomponio et al. (2020) (i.e., ComBat-GAM paper) in explicitly
 examining the impact of model specification for age effects. In
@@ -56,7 +55,6 @@ As a result, even when scanner effects are appropriately modeled,
 estimates of the underlying signal** after harmonization.
 
 **Step 2 — False positive rate (FPR) inflation under confounding**
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 We introduce **correlation** between scanner assignment and biological
 variables, and include a **null feature with no true association**. This
@@ -70,7 +68,6 @@ this assumption is violated, the adjustment can inadvertently
 reintroduce structured bias into the data.
 
 **Step 3 — Limitations of discrete scanner modeling**
-'''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 We simulate **continuous scanner variation** (e.g. acquisition quality,
 drift) and **within-scanner heterogeneity**. These factors are well
@@ -270,10 +267,7 @@ RMSE is about accuracy, not just shape
     RMSE quadratic:  2.61422
 
 
-Final Interpretation
-~~~~~~~~~~~~~~~~~~~~
-
-When the true biological relationship is linear, both linear and
+Final Interpretation: When the true biological relationship is linear, both linear and
 quadratic models provide an equivalent fit (R² ≈ 0.91, RMSE ≈ 2.6),
 indicating that a linear specification is sufficient to capture the
 underlying signal.
@@ -450,7 +444,6 @@ level (0.05) and for several features exceed the 95% calibration band,
 indicating **inflated false positive rates** .
 
 Key takeaway
-^^^^^^^^^^^^
 
 | Even when ComBat reduces apparent scanner effects, it does not ensure
   valid statistical inference.
@@ -468,14 +461,13 @@ variability is often **continuous** - e.g. signal-to-noise ratio (SNR) -
 contrast-to-noise ratio (CNR) - acquisition drift - and varies **within
 scanner** as well.
 
-Simulation design
-^^^^^^^^^^^^^^^^^
+Simulation design: we generate a dataset with 800 subjects and 20 features, 
+where the outcome is generated as a function of age, sex, and disease status.
 
-We generate: - discrete scanner IDs (A, B, C) - a continuous latent
-variable representing scanner quality
+We generate then discrete scanner IDs (A, B, C), a continuous latent
+variable representing scanner quality (e.g., SNR), and a continuous 
+scanner effect that depends on this latent variable.
 
-The true scanner effect depends on this continuous variable, not just
-the scanner label.
 
 .. code:: ipython3
 
@@ -525,7 +517,6 @@ the scanner label.
     Y_true = np.array(Y_true)
 
 Apply ComBat
-~~~~~~~~~~~~
 
 .. code:: ipython3
 
@@ -584,7 +575,6 @@ BUT:
   (~0), confirming it is an artifact
 
 Key takeaway
-~~~~~~~~~~~~
 
 | ComBat reduces scanner-induced variability but does not fully
   eliminate it.
