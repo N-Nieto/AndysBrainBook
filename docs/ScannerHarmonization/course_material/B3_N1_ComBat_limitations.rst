@@ -407,7 +407,9 @@ higher than expected, we compute an upper confidence bound for
 :math:`\hat{p}`, the sample estimate of the FPR, using a normal
 approximation to the binomial:
 
-.. math::  \hat{p} \pm 1.645 \times \sqrt{\frac{\hat{p}(1-\hat{p})}{N}}
+.. math::
+
+   \hat{p} \pm 1.645 \times \sqrt{\frac{\hat{p}(1-\hat{p})}{N}}
 
 This expression gives the 95th percentile (one-sided) of the sampling
 distribution of the FPR under the null.
