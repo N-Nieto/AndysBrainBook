@@ -1,3 +1,5 @@
+.. _B3_N1_ComBat_limitations:
+
 Demonstrating the Limitations of ComBat and general location-scale models
 =========================================================================
 
