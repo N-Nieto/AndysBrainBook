@@ -213,7 +213,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![output image 16-0](images/cell-16-0.png)
+![output image 16-0](images/B3_N3_im1.png)
 
 ### As expected, the performance of the **bad** sites is near to chance.
 ### Question
