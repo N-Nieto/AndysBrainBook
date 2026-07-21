@@ -12,19 +12,19 @@ In the most simple modelling approach, an individual measurement for one
 individual (for example, hippocampal volume) for participant i at site j
 can be expressed as a simple linear model of the form below:
 
-$ y_{ij} = :raw-latex:`\alpha`\ *j + :raw-latex:`\epsilon`*\ {ij}$
+.. math:: y_{ij} = \alpha_j + \epsilon_{ij}
 
 Where:
 
--  :math:`y_{ij}` is the observed measurement
+.. math:: y_{ij} \text{ is the observed measurement}
 
--  :math:`\alpha_j` is the average value at site :math:`j`
+.. math:: \alpha_j \text{ is the average value at site } j
 
--  :math:`\epsilon_{ij}` represents subject-level variation and noise
+.. math:: \epsilon_{ij} \text{ represents subject-level variation and noise}
 
 This assumes that a single measurement, for example the volume, is just
 a linear combination of the mean volume of that ROI, plus some subject
-specific effect :math:`\epsilon`
+specific effect :math:`\epsilon_{ij}`
 
 **Incorporating Biological Covariates**
 
@@ -35,8 +35,8 @@ interactions between them (such as age :math:`\times` sex).
 
 The most simple model, assuming no interactions, is then:
 
-$ y_{ij} = :raw-latex:`\alpha`\_j + X_i :raw-latex:`\beta`\ *j +
-:raw-latex:`\epsilon`*\ {ij}$
+.. math:: y_{ij} = \alpha_j + X_i \beta_j + \epsilon_{ij}
+    
 
 Have a look at what this looks like below; Here we simulate three sites,
 all drawn from the same normal distribution, and then choose site
@@ -148,20 +148,17 @@ Batch effects can alter both:
 A commonly used harmonisation framework (such as ComBat) models the data
 using an expression similar to:
 
-$ y_{ij} = :raw-latex:`\alpha`\ *j + X_i :raw-latex:`\beta`\ j + X_i
-:raw-latex:`\beta`\ {batch} + :raw-latex:`\delta`*\ {batch,i}
-:raw-latex:`\times `:raw-latex:`\epsilon`\_{ij}$
+.. math::  y_{ij} = \alpha_j + X_i \beta_j + X_i \beta_{batch} + \delta_{batch,i} \times \epsilon_{ij}
 
--  :math:`\alpha_j` represents the baseline mean
+.. math:: \alpha_j \text{ represents the baseline mean}
 
--  :math:`X_i \beta_j` captures biological covariate effects
+.. math:: X_i \beta_j \text{ captures biological covariate effects}
 
--  :math:`X_i \beta_{batch}` represents additive batch effects
-   (:math:`\gamma_{b,j}` is often also used)
+.. math:: X_i \beta_{batch} \text{ represents additive batch effects (} \gamma_{b,j} \text{ is often also used)}
 
--  :math:`\delta_{batch}` represents multiplicative variance effects
+.. math:: \delta_{batch} \text{ represents multiplicative variance effects}
 
--  :math:`\epsilon_{ij}` is residual error
+.. math:: \epsilon_{ij} \text{ is residual error}
 
 Batch effects can produce misleading conclusions if not properly
 accounted for.
@@ -278,11 +275,6 @@ biologically meaningful results.*
 Analysing batch effects in MRI data with DiagnoseHarmonise (DHARM)
 ==================================================================
 
-.. figure:: DHARM.png
-   :alt: DHARM
-
-   QR code to the DHARM webpage
-
 Why this matters
 ----------------
 
@@ -315,14 +307,6 @@ You can install or explore the library via:
 
 -  **PyPI** pip install DiagnoseHarmonise
 -  **GitHub**
-
-Tools for analysing batch effects presented at OHBM 2026
---------------------------------------------------------
-
--  **Poster 2005**: An open-source tool for the analysis of batch
-   differences and harmonisation efficacy for MRI data
--  **Poster 2004**: A Tool for Transparent and Standardized Assessment
-   of Multisite Harmonization in Neuroimaging
 
 Take-home message
 -----------------

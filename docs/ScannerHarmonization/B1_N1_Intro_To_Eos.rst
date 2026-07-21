@@ -93,29 +93,18 @@ notebook.
     import pathlib
     
     # 1. Display the example data from one subject in two different sessions using the provided viewer:
-    #  notebooks/block01/data/*.nii
-    DATA_DIR = pathlib.Path("../../data/data_block1")
+
     # Load the images, they are converted to arrays for ease within the MRIimage viewer class
     img1 = DATA_DIR / "Philips.nii"
     img2 = DATA_DIR / "GE.nii"
     
-    # We also have the T1 images registered (affine) to the MNI space, you can also load these to see that registration to a standard space
-    # will improve heterogeneity across scanners, but we will not use these for the rest of the course
-    #img1 = DATA_DIR / "Philips_brain_mni.nii.gz"
-    #img2 = DATA_DIR / "GE_brain_mni.nii.gz"
-    
     viewer1 = MRIImageViewer(img1, img2)
     viewer1.show()
 
-
-
-
-.. parsed-literal::
-
-    VBox(children=(HBox(children=(Button(button_style='primary', description='Axial', style=ButtonStyle()), Button…
-
 .. image:: B1_N1_Intro_To_Eos_files/Axial.png
+
 .. image:: B1_N1_Intro_To_Eos_files/Sagittal.png
+
 .. image:: B1_N1_Intro_To_Eos_files/Coronal.png
 
 Section 1.2: Basic image level statistics

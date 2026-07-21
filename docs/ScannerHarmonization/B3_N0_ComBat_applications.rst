@@ -3,19 +3,17 @@ Applying ComBat on simulated data:
 
 Combat assumes data is of the form:
 
-:math:`y_{i,j} = \alpha_0 + X_i\beta_j + \gamma_{b(i)j} + \delta_{b(i)j}\epsilon_{ij}`
+.. math:: y_{i,j} = \alpha_0 + X_i\beta_j + \gamma_{b(i)j} + \delta_{b(i)j}\epsilon_{ij}
 
 Where:
 
--  $ $ is the derived features (i.e. the volume of the hippocampus)
--  $ $ is the mean of the given feature
--  $ $ is a design matrix of covariates
--  $ $ are the estimated covariate effects (usually from taking the
-   psuedoinverse of the design with the dataset)
--  $ $ is the additive (location) effect
--  $ $ is the multiplicative (scaling) effect
--  $ $ is the subject specific term, assumed to capture subject specific
-   effects not described by covariates as well as measurement noise
+.. math:: y_{i,j} \text{ is the derived features (i.e. the volume of the hippocampus)}
+.. math:: \alpha_0 \text{ is the mean of the given feature}
+.. math:: X_i \text{ is a design matrix of covariates}
+.. math:: \beta_j \text{ are the estimated covariate effects (usually from taking the psuedoinverse of the design with the dataset)}
+.. math:: \gamma_{b(i)j} \text{ is the additive (location) effect}
+.. math:: \delta_{b(i)j} \text{ is the multiplicative (scaling) effect}
+.. math:: \epsilon_{ij} \text{ is the subject specific term, assumed to capture subject specific effects not described by covariates as well as measurement noise}
 
 Here, we will simulate some data as we did in section 1 and apply ComBat
 to it in order to see how it works and how well it does.
@@ -117,9 +115,9 @@ effects but with and without a batch effect for easier comparisson
     # If you have defined a batch effect using the simulator, you can skip this block
     
     batch_params = {
-        "Batch1": {"add_mean": 0.00, "add_sd": 0.05, "multi_mean": 1.00, "multi_shape": 25.0},
-        "Batch2": {"add_mean": 5, "add_sd": 0.08, "multi_mean": 1.5, "multi_shape": 18.0},
-        "Batch3": {"add_mean": -6, "add_sd": 0.06, "multi_mean": 0.8, "multi_shape": 30.0},
+        "Batch1": {"add_mean": 0, "add_sd": 0.05, "multi_mean": 0.5, "multi_shape": 25.0},
+        "Batch2": {"add_mean": 3, "add_sd": 0.08, "multi_mean": 1.9, "multi_shape": 18.0},
+        "Batch3": {"add_mean": -9, "add_sd": 0.06, "multi_mean": 0.7, "multi_shape": 30.0},
     }
 
 
@@ -204,9 +202,9 @@ This version has been installed locally in the block03_utils:
      [ 21.32213349   1.         165.32265572  70.19857413]
      [ 37.87925261   1.         149.30053152  62.69556106]
      ...
-     [ 86.68757171   0.         164.65047171  72.37865308]
-     [ 65.66636748   0.         167.53891688  70.25089182]
-     [ 56.48997195   0.         164.95502322  44.3826329 ]]
+     [ 71.68757171   0.         164.65047171  72.37865308]
+     [ 50.66636748   0.         167.53891688  70.25089182]
+     [ 41.48997195   0.         164.95502322  44.3826329 ]]
     (900, 4)
 
 
