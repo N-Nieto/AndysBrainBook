@@ -165,7 +165,7 @@ to model and remove both:
     9        4       TP0  Site_A  56.4     1629.5     1742.7     2199.9     2286.1
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_2_1.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_2_1.png
 
 
 .. code:: ipython3
@@ -211,16 +211,16 @@ to model and remove both:
     ================================================================================
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_3_1.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_3_1.png
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_3_2.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_3_2.png
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_3_3.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_3_3.png
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_3_4.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_3_4.png
 
 
 Interpreting the Regression Output
@@ -475,13 +475,13 @@ effects that primarily influence feature variance.
     3  Feature_1_harm   0.060993   1  8.049336e-01  Fligner
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_6_1.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_6_1.png
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_6_2.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_6_2.png
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_6_3.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_6_3.png
 
 
-.. image:: B2_N2_SiteRegression_forHarmonisation_Solutions_files/B2_N2_SiteRegression_forHarmonisation_Solutions_6_4.png
+.. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_6_4.png

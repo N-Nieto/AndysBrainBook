@@ -101,11 +101,11 @@ notebook.
     viewer1 = MRIImageViewer(img1, img2)
     viewer1.show()
 
-.. image:: B1_N1_Intro_To_Eos_files/Axial.png
+.. image:: images/B1_N1_Intro_To_Eos_Axial.png
 
-.. image:: B1_N1_Intro_To_Eos_files/Sagittal.png
+.. image:: images/B1_N1_Intro_To_Eos_Sagittal.png
 
-.. image:: B1_N1_Intro_To_Eos_files/Coronal.png
+.. image:: images/B1_N1_Intro_To_Eos_Coronal.png
 
 Section 1.2: Basic image level statistics
 -----------------------------------------
@@ -151,7 +151,7 @@ Additionally, try and answer these questions:
 
 
 
-.. image:: B1_N1_Intro_To_Eos_files/B1_N1_Intro_To_Eos_4_1.png
+.. image:: images/B1_N1_Intro_To_Eos_4_1.png
 
 
 Section 1.3: ROI/IDP differences due to scanner effects:
@@ -190,7 +190,7 @@ in the ON-Harmony dataset and we only use the IDPs here;
 
 
 
-.. image:: B1_N1_Intro_To_Eos_files/B1_N1_Intro_To_Eos_6_0.png
+.. image:: images/B1_N1_Intro_To_Eos_6_0.png
 
 
 There are a few things to notice about these measures, write some down

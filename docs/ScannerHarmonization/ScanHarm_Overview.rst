@@ -29,10 +29,19 @@ Course Structure
 
 .. toctree::
    :maxdepth: 1
-   :caption: Start to Finish Analysis with FreeSurfer
+   :caption: Start to Finish Harmonisation material
 
-   course_material/B1
-   course_material/B2
+   course_material/B1_N1_Intro_To_Eos
+   course_material/B1_N2_Simulated_example_of_Eos
+   course_material/B2_N1_HarmonisationEvaluation
+   course_material/B2_N2_SiteRegression_forHarmonisation
+   course_material/B2_N3_Regression_versus_ComBat_harmonisation
+   course_material/B3_N0_ComBat_applications
    course_material/B3_N1_ComBat_limitations
-   course_material/B4
+   course_material/B3_N2_EoS_in_ML
+   course_material/B3_N3_Metrics_by_Site
+   course_material/B3_N4_ComBat_in_imbalance_classes
+   course_material/B4_N1_IQM-harmonisation_light
+   course_material/B4_N2_HarmoniseImages
+   course_material/B4_N3_normative_modelling
    

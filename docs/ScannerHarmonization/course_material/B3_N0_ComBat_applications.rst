@@ -103,11 +103,11 @@ effects but with and without a batch effect for easier comparisson
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_3_0.png
+.. image:: images/B3_N0_ComBat_applications_3_0.png
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_3_1.png
+.. image:: images/B3_N0_ComBat_applications_3_1.png
 
 
 .. code:: ipython3
@@ -287,11 +287,11 @@ We will do this three ways:
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_9_0.png
+.. image:: images/B3_N0_ComBat_applications_9_0.png
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_9_1.png
+.. image:: images/B3_N0_ComBat_applications_9_1.png
 
 
 Other visualisations:
@@ -320,7 +320,7 @@ effects.
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_11_0.png
+.. image:: images/B3_N0_ComBat_applications_11_0.png
 
 
 Notice that there may still be distinct batch clusters before and after

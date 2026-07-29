@@ -124,7 +124,7 @@ Problem characteristic:
    clf.fit(X, y)
    plot_decision_boundary_2d(ax, clf)
 
-.. figure:: images/B3_N2_im1.png
+.. figure:: images/B3_N2_EoS_in_ML_im1.png
    :alt: output image 4-0
 
    output image 4-0
@@ -203,7 +203,7 @@ What to expect?
    clf.fit(X, y)
    plot_decision_boundary_2d(ax, clf)
 
-.. figure:: images/B3_N2_im2.png
+.. figure:: images/B3_N2_EoS_in_ML_im2.png
    :alt: output image 9-0
 
    output image 9-0
@@ -290,7 +290,7 @@ What to expect?
    clf.fit(X, y)
    plot_decision_boundary_2d(ax, clf)
 
-.. figure:: images/B3_N2_im3.png
+.. figure:: images/B3_N2_EoS_in_ML_im3.png
    :alt: output image 15-0
 
    output image 15-0
@@ -367,7 +367,7 @@ What to expect?
    clf.fit(X, y)
    plot_decision_boundary_2d(ax, clf)
 
-.. figure:: images/B3_N2_im4.png
+.. figure:: images/B3_N2_EoS_in_ML_im4.png
    :alt: output image 20-0
 
    output image 20-0
@@ -441,7 +441,7 @@ What to expect?
    clf.fit(X, y)
    plot_decision_boundary_2d(ax, clf)
 
-.. figure:: images/B3_N2_im5.png
+.. figure:: images/B3_N2_EoS_in_ML_im5.png
    :alt: output image 25-0
 
    output image 25-0
