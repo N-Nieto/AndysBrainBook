@@ -3,12 +3,15 @@ Applying ComBat on simulated data:
 
 Combat assumes data is of the form:
 
-.. math:: y_{i,j} = \alpha_0 + X_i\beta_j + \gamma_{b(i)j} + \delta_{b(i)j}\epsilon_{ij}
+.. math::
+
+    y_{i,j} = \alpha_0 + X_i\beta_j + \gamma_{b(i)j} + \delta_{b(i)j}\epsilon_{ij}
 
 Where:
 
-.. math:: y_{i,j} \text{ is the derived features (i.e. the volume of the hippocampus)}
-.. math:: \alpha_0 \text{ is the mean of the given feature}
+.. math:: 
+    y_{i,j} \text{ is the derived features (i.e. the volume of the hippocampus)}
+    \alpha_0 \text{ is the mean of the given feature}
 .. math:: X_i \text{ is a design matrix of covariates}
 .. math:: \beta_j \text{ are the estimated covariate effects (usually from taking the psuedoinverse of the design with the dataset)}
 .. math:: \gamma_{b(i)j} \text{ is the additive (location) effect}
