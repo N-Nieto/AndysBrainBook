@@ -200,7 +200,7 @@ while the quadratic model provides an accurate representation of the data.
 This highlights the importance of correctly specifying the biological model when applying harmonization methods like ComBat, 
 as misspecification can lead to biased estimates and distorted results.
 
-.. image:: B3_N1_ComBat_limitations_4_0.png
+.. image:: images/B3_N1_ComBat_limitations_4_0.png
 
 
 .. code:: ipython3
@@ -438,7 +438,7 @@ This visualization allows us to assess whether ComBat is inflating false positiv
 in the presence of confounding between scanner and biological variables.
 
 
-.. image:: B3_N1_ComBat_limitations_16_0.png
+.. image:: images/B3_N1_ComBat_limitations_16_0.png
 
 
 ComBat leads to FPR values that are systematically above the nominal
@@ -540,7 +540,7 @@ against scanner quality for a single feature. We can observe that while ComBat r
 the association between scanner quality and the observed data, it does not fully eliminate it, 
 and a clear residual relationship remains after harmonization.
 
-.. image:: B3_N1_ComBat_limitations_22_0.png
+.. image:: images/B3_N1_ComBat_limitations_22_0.png
 
 We then compute the correlation between scanner quality and the observed data,
 the ComBat-corrected data, and the true biological signal. 

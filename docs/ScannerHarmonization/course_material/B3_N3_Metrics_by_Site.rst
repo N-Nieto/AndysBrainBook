@@ -213,7 +213,7 @@ Now, let's explore the performance obtained in each of the sites.
     plt.tight_layout()
     plt.show()
 
-.. figure:: images/B3_N3_im1.png
+.. figure:: images/B3_N3_Metrics_by_Site_im1.png
    :alt: output image 1-0
 
    output image 1-0

@@ -99,7 +99,7 @@ the resulting histograms.
 
 
 
-.. image:: B1_N2_Simulated_example_of_Eos_files/B1_N2_Simulated_example_of_Eos_2_0.png
+.. image:: images/B1_N2_Simulated_example_of_Eos_2_0.png
 
 
 .. code:: ipython3
@@ -125,11 +125,11 @@ the resulting histograms.
 
 
 
-.. image:: B1_N2_Simulated_example_of_Eos_files/B1_N2_Simulated_example_of_Eos_3_0.png
+.. image:: images/B1_N2_Simulated_example_of_Eos_3_0.png
 
 
 
-.. image:: B1_N2_Simulated_example_of_Eos_files/B1_N2_Simulated_example_of_Eos_3_1.png
+.. image:: images/B1_N2_Simulated_example_of_Eos_3_1.png
 
 
 Section 1.5: Non-biological site differences
@@ -210,7 +210,7 @@ As you explore the simulations, think carefully about:
 
 
 
-.. image:: B1_N2_Simulated_example_of_Eos_files/B1_N2_Simulated_example_of_Eos_5_0.png
+.. image:: images/B1_N2_Simulated_example_of_Eos_5_0.png
 
 
 After introducing batch effects, the relationships between imaging
@@ -249,11 +249,11 @@ spurious findings.
 
 
 
-.. image:: B1_N2_Simulated_example_of_Eos_files/B1_N2_Simulated_example_of_Eos_7_0.png
+.. image:: images/B1_N2_Simulated_example_of_Eos_7_0.png
 
 
 
-.. image:: B1_N2_Simulated_example_of_Eos_files/B1_N2_Simulated_example_of_Eos_7_1.png
+.. image:: images/B1_N2_Simulated_example_of_Eos_7_1.png
 
 
 Summary:

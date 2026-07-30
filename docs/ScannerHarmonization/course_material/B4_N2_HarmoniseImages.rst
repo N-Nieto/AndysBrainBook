@@ -112,7 +112,7 @@ histograms focus on brain tissue rather than air.
 
 
 
-.. image:: B4_N2_HarmoniseImages_Solutions_files/B4_N2_HarmoniseImages_Solutions_4_0.png
+.. image:: images/B4_N2_HarmoniseImages_Solutions_4_0.png
 
 
 Step 2: Apply histogram matching
@@ -163,7 +163,7 @@ histogram should look more similar to the reference histogram.
 
 
 
-.. image:: B4_N2_HarmoniseImages_Solutions_files/B4_N2_HarmoniseImages_Solutions_8_0.png
+.. image:: images/B4_N2_HarmoniseImages_Solutions_8_0.png
 
 
 Optional: Visual inspection of the images
@@ -227,7 +227,7 @@ for accurate interpretation and quality assessment.
 
 
 
-.. image:: B4_N2_HarmoniseImages_Solutions_files/B4_N2_HarmoniseImages_Solutions_10_0.png
+.. image:: images/B4_N2_HarmoniseImages_Solutions_10_0.png
 
 
 Compare downstream tissue volume estimates
@@ -345,7 +345,7 @@ matching can affect downstream quantitative measures.
 
 
 
-.. image:: B4_N2_HarmoniseImages_Solutions_files/B4_N2_HarmoniseImages_Solutions_13_1.png
+.. image:: images/B4_N2_HarmoniseImages_Solutions_13_1.png
 
 
 Interpretation
@@ -493,11 +493,11 @@ appropriate for multi-site and multi-vendor studies.
 
 
 
-.. image:: B4_N2_HarmoniseImages_Solutions_files/B4_N2_HarmoniseImages_Solutions_16_0.png
+.. image:: images/B4_N2_HarmoniseImages_Solutions_16_0.png
 
 
 
-.. image:: B4_N2_HarmoniseImages_Solutions_files/B4_N2_HarmoniseImages_Solutions_16_1.png
+.. image:: images/B4_N2_HarmoniseImages_Solutions_16_1.png
 
 
 ## Advanced Image-Level Harmonisation Approaches

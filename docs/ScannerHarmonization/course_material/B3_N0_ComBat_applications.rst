@@ -3,17 +3,20 @@ Applying ComBat on simulated data:
 
 Combat assumes data is of the form:
 
-.. math:: y_{i,j} = \alpha_0 + X_i\beta_j + \gamma_{b(i)j} + \delta_{b(i)j}\epsilon_{ij}
+.. math::
+
+    y_{i,j} = \alpha_0 + X_i\beta_j + \gamma_{b(i)j} + \delta_{b(i)j}\epsilon_{ij}
 
 Where:
 
-.. math:: y_{i,j} \text{ is the derived features (i.e. the volume of the hippocampus)}
-.. math:: \alpha_0 \text{ is the mean of the given feature}
-.. math:: X_i \text{ is a design matrix of covariates}
-.. math:: \beta_j \text{ are the estimated covariate effects (usually from taking the psuedoinverse of the design with the dataset)}
-.. math:: \gamma_{b(i)j} \text{ is the additive (location) effect}
-.. math:: \delta_{b(i)j} \text{ is the multiplicative (scaling) effect}
-.. math:: \epsilon_{ij} \text{ is the subject specific term, assumed to capture subject specific effects not described by covariates as well as measurement noise}
+.. math:: 
+    y_{i,j} \text{ is the derived features (i.e. the volume of the hippocampus)}
+    \alpha_0 \text{ is the mean of the given feature}
+    X_i \text{ is a design matrix of covariates}
+    \beta_j \text{ are the estimated covariate effects (usually from taking the psuedoinverse of the design with the dataset)}
+    \gamma_{b(i)j} \text{ is the additive (location) effect}
+    \delta_{b(i)j} \text{ is the multiplicative (scaling) effect}
+    \epsilon_{ij} \text{ is the subject specific term, assumed to capture subject specific effects not described by covariates as well as measurement noise}
 
 Here, we will simulate some data as we did in section 1 and apply ComBat
 to it in order to see how it works and how well it does.
@@ -103,11 +106,11 @@ effects but with and without a batch effect for easier comparisson
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_3_0.png
+.. image:: images/B3_N0_ComBat_applications_3_0.png
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_3_1.png
+.. image:: images/B3_N0_ComBat_applications_3_1.png
 
 
 .. code:: ipython3
@@ -287,11 +290,11 @@ We will do this three ways:
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_9_0.png
+.. image:: images/B3_N0_ComBat_applications_9_0.png
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_9_1.png
+.. image:: images/B3_N0_ComBat_applications_9_1.png
 
 
 Other visualisations:
@@ -320,7 +323,7 @@ effects.
 
 
 
-.. image:: B3_N0_ComBat_applications_files/B3_N0_ComBat_applications_11_0.png
+.. image:: images/B3_N0_ComBat_applications_11_0.png
 
 
 Notice that there may still be distinct batch clusters before and after

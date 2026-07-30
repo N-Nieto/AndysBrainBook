@@ -303,19 +303,19 @@ before and after harmonisation?*
 
 
 
-.. image:: B4_N1_IQM-harmonisation_light_Solutions_files/B4_N1_IQM-harmonisation_light_Solutions_3_2.png
+.. image:: images/B4_N1_IQM-harmonisation_light_Solutions_3_2.png
 
 
 
-.. image:: B4_N1_IQM-harmonisation_light_Solutions_files/B4_N1_IQM-harmonisation_light_Solutions_3_3.png
+.. image:: images/B4_N1_IQM-harmonisation_light_Solutions_3_3.png
 
 
 
-.. image:: B4_N1_IQM-harmonisation_light_Solutions_files/B4_N1_IQM-harmonisation_light_Solutions_3_4.png
+.. image:: images/B4_N1_IQM-harmonisation_light_Solutions_3_4.png
 
 
 
-.. image:: B4_N1_IQM-harmonisation_light_Solutions_files/B4_N1_IQM-harmonisation_light_Solutions_3_5.png
+.. image:: images/B4_N1_IQM-harmonisation_light_Solutions_3_5.png
 
 
 Real data examples:
@@ -501,7 +501,7 @@ distributions may appear modest, particularly in univariate summaries.
 
 
 
-.. image:: B4_N1_IQM-harmonisation_light_Solutions_files/B4_N1_IQM-harmonisation_light_Solutions_5_3.png
+.. image:: images/B4_N1_IQM-harmonisation_light_Solutions_5_3.png
 
 
 Conceptual Notes and Limitations

@@ -266,7 +266,7 @@ Lower values indicate better agreement across scans/sites/scanners.
 
 
 
-.. image:: B2_N1_HarmonisationEvaluation_Solutions_files/B2_N1_HarmonisationEvaluation_Solutions_5_1.png
+.. image:: images/B2_N1_HarmonisationEvaluation_Solutions_5_1.png
 
 
 Interpretation of Results
@@ -473,7 +473,7 @@ other features.
 
 
 
-.. image:: B2_N1_HarmonisationEvaluation_Solutions_files/B2_N1_HarmonisationEvaluation_Solutions_8_2.png
+.. image:: images/B2_N1_HarmonisationEvaluation_Solutions_8_2.png
 
 
 --------------
@@ -576,7 +576,7 @@ preserved across scanners/timepoints.
 
 
 
-.. image:: B2_N1_HarmonisationEvaluation_Solutions_files/B2_N1_HarmonisationEvaluation_Solutions_11_2.png
+.. image:: images/B2_N1_HarmonisationEvaluation_Solutions_11_2.png
 
 
 Exercise: Subject Order Consistency Across Timepoints
@@ -786,7 +786,7 @@ simulated batch effects and noise.
 
 
 
-.. image:: B2_N1_HarmonisationEvaluation_Solutions_files/B2_N1_HarmonisationEvaluation_Solutions_13_2.png
+.. image:: images/B2_N1_HarmonisationEvaluation_Solutions_13_2.png
 
 
 --------------
@@ -979,7 +979,7 @@ methods.
 
 
 
-.. image:: B2_N1_HarmonisationEvaluation_Solutions_files/B2_N1_HarmonisationEvaluation_Solutions_18_1.png
+.. image:: images/B2_N1_HarmonisationEvaluation_Solutions_18_1.png
 
 
 .. code:: ipython3

@@ -175,7 +175,7 @@ After ComBat/neuroHarmonize harmonisation
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_3_1.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_3_1.png
 
 
 .. code:: ipython3
@@ -222,19 +222,19 @@ After ComBat/neuroHarmonize harmonisation
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_1.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_1.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_2.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_2.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_3.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_3.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_4.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_4.png
 
 
 .. code:: ipython3
@@ -286,19 +286,19 @@ After ComBat/neuroHarmonize harmonisation
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_1.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_1.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_2.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_2.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_3.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_3.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_4.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_5_4.png
 
 
 
@@ -467,11 +467,11 @@ After ComBat/neuroHarmonize harmonisation
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_1.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_1.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_2.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_2.png
 
 
 .. parsed-literal::
@@ -484,11 +484,11 @@ After ComBat/neuroHarmonize harmonisation
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_4.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_4.png
 
 
 
-.. image:: B2_N3_Regression_versus_ComBat_harmonisation_Solutions_files/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_5.png
+.. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_7_5.png
 
 
 Longitudinal ComBat Harmonisation
