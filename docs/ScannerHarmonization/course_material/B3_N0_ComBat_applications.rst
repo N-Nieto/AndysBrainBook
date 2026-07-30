@@ -12,11 +12,11 @@ Where:
 .. math:: 
     y_{i,j} \text{ is the derived features (i.e. the volume of the hippocampus)}
     \alpha_0 \text{ is the mean of the given feature}
-.. math:: X_i \text{ is a design matrix of covariates}
-.. math:: \beta_j \text{ are the estimated covariate effects (usually from taking the psuedoinverse of the design with the dataset)}
-.. math:: \gamma_{b(i)j} \text{ is the additive (location) effect}
-.. math:: \delta_{b(i)j} \text{ is the multiplicative (scaling) effect}
-.. math:: \epsilon_{ij} \text{ is the subject specific term, assumed to capture subject specific effects not described by covariates as well as measurement noise}
+    X_i \text{ is a design matrix of covariates}
+    \beta_j \text{ are the estimated covariate effects (usually from taking the psuedoinverse of the design with the dataset)}
+    \gamma_{b(i)j} \text{ is the additive (location) effect}
+    \delta_{b(i)j} \text{ is the multiplicative (scaling) effect}
+    \epsilon_{ij} \text{ is the subject specific term, assumed to capture subject specific effects not described by covariates as well as measurement noise}
 
 Here, we will simulate some data as we did in section 1 and apply ComBat
 to it in order to see how it works and how well it does.
