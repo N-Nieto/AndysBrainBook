@@ -30,23 +30,10 @@ Course Structure
 -------------------
 The course is divided into four main blocks, each focusing on a specific aspect of harmonization:  
 
-- **Block 1: Effects of Site Introduction**  
-  - B1_N1_Intro_To_Eos
-  - B1_N2_Simulated_example_of_Eos
-- **Block 2: Harmonization Evaluation**
-  - B2_N1_HarmonisationEvaluation
-  - B2_N2_SiteRegression_forHarmonisation
-  - B2_N3_Regression_versus_ComBat_harmonisation
-- **Block 3: Location-Scale Methods: ComBat Applications**
-  - B3_N0_ComBat_applications
-  - B3_N1_ComBat_limitations
-  - B3_N2_EoS_in_ML
-  - B3_N3_Metrics_by_Site
-  - B3_N4_ComBat_in_imbalance_classes  
-- **Block 4: Alternatives & Future Directions**
-  - B4_N1_IQM-harmonisation_light
-  - B4_N2_HarmoniseImages
-  - B4_N3_normative_modelling
+- **Block 1 (B1): Effects of Site Introduction**  
+- **Block 2 (B2): Harmonization Evaluation**
+- **Block 3 (B3): Location-Scale Methods: ComBat Applications**
+- **Block 4 (B4): Alternatives & Future Directions**
 
 .. toctree::
    :maxdepth: 1
