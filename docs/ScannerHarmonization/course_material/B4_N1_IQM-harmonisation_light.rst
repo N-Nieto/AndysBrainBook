@@ -1,7 +1,7 @@
 Positioning the IQM-Based Mixed-Effects Harmonisation Framework
 ===============================================================
 
-In this course, we will demonstrate an IQM-based harmonisation workflow
+In this section, we will demonstrate an IQM-based harmonisation workflow
 for removing batch effects from imaging-derived phenotypes (IDPs).
 
 The framework implements a relatively lightweight and interpretable
@@ -77,10 +77,6 @@ Further reading
 Comprehensive methodological documentation can be found at `this
 link <https://github.com/gvbhalerao591/Harmonisation-Paper/blob/main/manuscript_materials/AppendixA-IQM-informed_harmonisation.pdf>`__.
 
-.. code:: ipython3
-
-    # install packages if required
-    %pip install numpy scipy pandas scikit-learn statsmodels matplotlib seaborn
 
 Inputs Required for the Code
 ----------------------------
@@ -296,13 +292,6 @@ before and after harmonisation?*
     Done!
 
 
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1564: RuntimeWarning: divide by zero encountered in log
-      likeval -= self.n_totobs * np.log(qf) / 2.
-
-
-
 .. image:: images/B4_N1_IQM-harmonisation_light_Solutions_3_2.png
 
 
@@ -452,28 +441,6 @@ distributions may appear modest, particularly in univariate summaries.
     === Multiplicative selection: T1_SIENAX_WM_norm_vol ===
 
 
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1564: RuntimeWarning: divide by zero encountered in log
-      likeval -= self.n_totobs * np.log(qf) / 2.
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block04/block4_utils/iqm_harmonisation_light.py:365: RuntimeWarning: invalid value encountered in scalar subtract
-      lr_stat = 2.0 * (full_fit.llf - reduced_fit.llf)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1564: RuntimeWarning: divide by zero encountered in log
-      likeval -= self.n_totobs * np.log(qf) / 2.
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block04/block4_utils/iqm_harmonisation_light.py:365: RuntimeWarning: invalid value encountered in scalar subtract
-      lr_stat = 2.0 * (full_fit.llf - reduced_fit.llf)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1564: RuntimeWarning: divide by zero encountered in log
-      likeval -= self.n_totobs * np.log(qf) / 2.
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block04/block4_utils/iqm_harmonisation_light.py:365: RuntimeWarning: invalid value encountered in scalar subtract
-      lr_stat = 2.0 * (full_fit.llf - reduced_fit.llf)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1564: RuntimeWarning: divide by zero encountered in log
-      likeval -= self.n_totobs * np.log(qf) / 2.
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block04/block4_utils/iqm_harmonisation_light.py:365: RuntimeWarning: invalid value encountered in scalar subtract
-      lr_stat = 2.0 * (full_fit.llf - reduced_fit.llf)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1564: RuntimeWarning: divide by zero encountered in log
-      likeval -= self.n_totobs * np.log(qf) / 2.
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block04/block4_utils/iqm_harmonisation_light.py:365: RuntimeWarning: invalid value encountered in scalar subtract
-      lr_stat = 2.0 * (full_fit.llf - reduced_fit.llf)
 
 
 .. parsed-literal::

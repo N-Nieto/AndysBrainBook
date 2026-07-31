@@ -182,13 +182,6 @@ the **coefficient of variation (CoV)**:
 Lower values indicate better agreement across scans/sites/scanners.
 
 .. code:: ipython3
-
-    # Uncomment if packages are missing
-    %pip install numpy pandas matplotlib statsmodels scikit-learn seaborn
-
-.. code:: ipython3
-
-    from block2_utils.HarmonisationEvaluation_functions import simulate_harmonisation_data
     
     # Let's simulate 30 subjects, acquired at 2 timepoints and has 2 features
     
@@ -229,8 +222,6 @@ Lower values indicate better agreement across scans/sites/scanners.
 .. code:: ipython3
 
     # Run code for calculating within-subject variability
-    from block2_utils.HarmonisationEvaluation_functions import WithinSubjVar_long
-    from block2_utils.HarmonisationEvaluation_plots import plot_WithinSubjVar
     
     # df has columns: Subject, Timepoint, Site, features
     
@@ -255,14 +246,6 @@ Lower values indicate better agreement across scans/sites/scanners.
         limit_subjects=n_subjects,
         limit_idps_for_legend=n_features,
     )
-
-
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:97: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
-      axA.set_xticklabels(
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:177: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
-      plt.tight_layout(rect=[0, 0, 0.88, 0.95])
 
 
 
@@ -309,7 +292,7 @@ For harmonisation evaluation:
 Exercise: Extend the simulated data to multiple timepoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Modify the simulated dataset by increasing number of subjects,
+We modify the simulated dataset by increasing number of subjects,
 timepoints, features etc. and run the code again.
 
 1. Simulate a dataset with:
@@ -336,35 +319,8 @@ timepoints, features etc. and run the code again.
 - What happens to the within subject variability if scanner/site effects
   become larger?
 
-Within-subject variability analysis from exercise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The within-subject variability analysis shows that the simulated
-features exhibit different levels of longitudinal stability across
-repeated measurements.
-
-Overall:
-
-- ``Feature_1`` showed the lowest variability across subjects (typically
-  ~2–5%)
-- ``Feature_3`` also demonstrated relatively low variability (~4–8%)
-- ``Feature_4`` and ``Feature_5`` showed moderate variability (~11–15%)
-- ``Feature_2`` consistently showed the highest within-subject
-  variability (~15–20%)
-
-These results suggest that some simulated features are substantially
-more stable across longitudinal acquisitions, whereas others are more
-sensitive to scanner/site effects and measurement noise.
-
-The elevated variability observed for ``Feature_2`` may reflect stronger
-simulated batch effects or increased noise contributions relative to the
-other features.
 
 .. code:: ipython3
-
-    from block2_utils.HarmonisationEvaluation_functions import simulate_harmonisation_data
-    from block2_utils.HarmonisationEvaluation_functions import WithinSubjVar_long
-    from block2_utils.HarmonisationEvaluation_plots import plot_WithinSubjVar
     
     # Let's simulate 30 subjects, acquired at 4 timepoints and has 5 features
     n_subjects=30
@@ -464,17 +420,31 @@ other features.
     29       30   2.180558  18.597533   6.717579  10.935154  13.180566
 
 
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:97: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
-      axA.set_xticklabels(
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:177: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
-      plt.tight_layout(rect=[0, 0, 0.88, 0.95])
-
-
-
 .. image:: images/B2_N1_HarmonisationEvaluation_Solutions_8_2.png
 
+Within-subject variability analysis from exercise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The within-subject variability analysis shows that the simulated
+features exhibit different levels of longitudinal stability across
+repeated measurements.
+
+Overall:
+
+- ``Feature_1`` showed the lowest variability across subjects (typically
+  ~2–5%)
+- ``Feature_3`` also demonstrated relatively low variability (~4–8%)
+- ``Feature_4`` and ``Feature_5`` showed moderate variability (~11–15%)
+- ``Feature_2`` consistently showed the highest within-subject
+  variability (~15–20%)
+
+These results suggest that some simulated features are substantially
+more stable across longitudinal acquisitions, whereas others are more
+sensitive to scanner/site effects and measurement noise.
+
+The elevated variability observed for ``Feature_2`` may reflect stronger
+simulated batch effects or increased noise contributions relative to the
+other features.
 
 --------------
 
@@ -503,12 +473,6 @@ consistency suggests that biological differences between subjects are
 preserved across scanners/timepoints.
 
 .. code:: ipython3
-
-    from block2_utils.HarmonisationEvaluation_functions import simulate_harmonisation_data
-    from block2_utils.HarmonisationEvaluation_functions import SubjectOrder_long
-    from block2_utils.HarmonisationEvaluation_plots import plot_SubjectOrder
-    
-    from block2_utils.HarmonisationEvaluation_functions import simulate_harmonisation_data
     
     # Let's simulate 15 subjects, acquired at 2 timepoints and has 2 features
     n_subjects=15
@@ -565,17 +529,6 @@ preserved across scanners/timepoints.
     1   TP0   TP1  Feature_2      15     0.871429    -0.025714  0.009901
 
 
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:382: RuntimeWarning: Mean of empty slice
-      combined_rho_matrix = np.nanmean(stacked, axis=0)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:466: RuntimeWarning: Mean of empty slice
-      mean_rho_matrix = np.nanmean(stacked, axis=0)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:608: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
-      plt.tight_layout(rect=[0, 0, 0.90, 0.96])
-
-
-
 .. image:: images/B2_N1_HarmonisationEvaluation_Solutions_11_2.png
 
 
@@ -606,84 +559,8 @@ Tasks
 
 --------------
 
-Overall Interpretation
-~~~~~~~~~~~~~~~~~~~~~~
-
-- High Spearman correlations indicate that subjects maintain a similar
-  ranking across scans.
-- Significant permutation-test p-values indicate that the observed
-  consistency is stronger than expected by chance.
-- Strong subject order consistency after harmonisation suggests that
-  biological differences between subjects are preserved while
-  scanner-related effects are reduced.
-
---------------
-
-Questions
-~~~~~~~~~
-
-- Which timepoint pairs show the strongest consistency?
-- Which regions show weaker consistency?
-- What happens to the correlations if scanner/site effects become
-  larger?
-- Why is preserving subject ordering important in harmonisation?
-
-Interpretation of the Subject-Order Consistency Results from exercise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The Spearman correlation analysis demonstrates varying levels of
-subject-order consistency across longitudinal timepoint pairs and
-simulated features.
-
-Overall, the strongest consistency was observed for comparisons
-involving later timepoints, particularly:
-
-- **TP1–TP3**
-- **TP2–TP3**
-- **TP1–TP2**
-
-For example:
-
-- ``Feature_1`` showed very high correlations for:
-
-  - TP1–TP3 (``ρ = 0.716``, ``p = 0.0099``)
-  - TP2–TP3 (``ρ = 0.690``, ``p = 0.0099``)
-  - TP1–TP2 (``ρ = 0.667``, ``p = 0.0099``)
-
-Similarly, ``Feature_3`` and ``Feature_4`` demonstrated
-moderate-to-strong consistency across several timepoint pairs, with many
-statistically significant correlations.
-
-In contrast, lower subject-order consistency was observed for:
-
-- ``Feature_2``
-- ``Feature_5``
-
-particularly for:
-
-- TP0–TP1
-- TP1–TP2
-- TP2–TP3
-
-Examples include:
-
-- ``Feature_5``, TP2–TP3 (``ρ = 0.051``, ``p = 0.772``)
-- ``Feature_2``, TP0–TP1 (``ρ = 0.083``, ``p = 0.703``)
-
-These low correlations suggest weaker preservation of subject ranking
-across these timepoint pairs, potentially reflecting stronger simulated
-site effects, measurement noise, or reduced feature stability.
-
-Overall, the results illustrate that some features remain relatively
-stable across longitudinal acquisitions despite scanner/site
-differences, whereas others are substantially more sensitive to
-simulated batch effects and noise.
 
 .. code:: ipython3
-
-    from block2_utils.HarmonisationEvaluation_functions import simulate_harmonisation_data
-    from block2_utils.HarmonisationEvaluation_functions import SubjectOrder_long
-    from block2_utils.HarmonisationEvaluation_plots import plot_SubjectOrder
     
     # Let's simulate 30 subjects, acquired at 4 timepoints and has 5 features
     n_subjects=30
@@ -775,18 +652,72 @@ simulated batch effects and noise.
     29   TP2   TP3  Feature_5      30     0.050945    -0.001499  0.772277
 
 
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:382: RuntimeWarning: Mean of empty slice
-      combined_rho_matrix = np.nanmean(stacked, axis=0)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:466: RuntimeWarning: Mean of empty slice
-      mean_rho_matrix = np.nanmean(stacked, axis=0)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/notebooks/block02/block2_utils/HarmonisationEvaluation_plots.py:608: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
-      plt.tight_layout(rect=[0, 0, 0.90, 0.96])
-
-
 
 .. image:: images/B2_N1_HarmonisationEvaluation_Solutions_13_2.png
+
+Interpretation of the Subject-Order Consistency Results from exercise
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Spearman correlation analysis demonstrates varying levels of
+subject-order consistency across longitudinal timepoint pairs and
+simulated features.
+
+Overall, the strongest consistency was observed for comparisons
+involving later timepoints, particularly:
+
+- **TP1–TP3**
+- **TP2–TP3**
+- **TP1–TP2**
+
+For example:
+
+- ``Feature_1`` showed very high correlations for:
+
+  - TP1–TP3 (``ρ = 0.716``, ``p = 0.0099``)
+  - TP2–TP3 (``ρ = 0.690``, ``p = 0.0099``)
+  - TP1–TP2 (``ρ = 0.667``, ``p = 0.0099``)
+
+Similarly, ``Feature_3`` and ``Feature_4`` demonstrated
+moderate-to-strong consistency across several timepoint pairs, with many
+statistically significant correlations.
+
+In contrast, lower subject-order consistency was observed for:
+
+- ``Feature_2``
+- ``Feature_5``
+
+particularly for:
+
+- TP0–TP1
+- TP1–TP2
+- TP2–TP3
+
+Examples include:
+
+- ``Feature_5``, TP2–TP3 (``ρ = 0.051``, ``p = 0.772``)
+- ``Feature_2``, TP0–TP1 (``ρ = 0.083``, ``p = 0.703``)
+
+These low correlations suggest weaker preservation of subject ranking
+across these timepoint pairs, potentially reflecting stronger simulated
+site effects, measurement noise, or reduced feature stability.
+
+Overall, the results illustrate that some features remain relatively
+stable across longitudinal acquisitions despite scanner/site
+differences, whereas others are substantially more sensitive to
+simulated batch effects and noise.
+
+Overall Interpretation
+~~~~~~~~~~~~~~~~~~~~~~
+
+- High Spearman correlations indicate that subjects maintain a similar
+  ranking across scans.
+- Significant permutation-test p-values indicate that the observed
+  consistency is stronger than expected by chance.
+- Strong subject order consistency after harmonisation suggests that
+  biological differences between subjects are preserved while
+  scanner-related effects are reduced.
+
+--------------
 
 
 --------------
@@ -933,9 +864,6 @@ scanner/site effects influence longitudinal analyses and harmonisation
 methods.
 
 .. code:: ipython3
-
-    from block2_utils.HarmonisationEvaluation_functions import simulate_longitudinal_batch_data_mixed
-    from block2_utils.HarmonisationEvaluation_plots import plot_additive_multiplicative_effects
     
     # Let's simulate some data: 100 subjects, 3 timepoints, 2 sites, features from 4 brain regions
     n_subjects=100
@@ -983,10 +911,6 @@ methods.
 
 
 .. code:: ipython3
-
-    from block2_utils.HarmonisationEvaluation_functions import AdditiveEffect_long
-    from block2_utils.HarmonisationEvaluation_functions import MultiplicativeEffect_long
-    import warnings
     
     feature_cols = [f"Feature_{i}" for i in range(1, n_features + 1)]
     
@@ -1021,29 +945,11 @@ methods.
 
 .. parsed-literal::
 
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1634: UserWarning: Random effects covariance is singular
-      warnings.warn(msg)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:2237: ConvergenceWarning: The MLE may be on the boundary of the parameter space.
-      warnings.warn(msg, ConvergenceWarning)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1634: UserWarning: Random effects covariance is singular
-      warnings.warn(msg)
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1634: UserWarning: Random effects covariance is singular
-      warnings.warn(msg)
-
-
-.. parsed-literal::
-
          Feature      TestStat  df   p-value method
     0  Feature_1  42809.429774   1  0.000000   Wald
     1  Feature_3   3243.301501   1  0.000000   Wald
     2  Feature_4      0.140928   1  0.707360   Wald
     3  Feature_2      0.072801   1  0.787301   Wald
-
-
-.. parsed-literal::
-
-    /Users/psyc1586_admin/OHBM2026_educational_harmonisation/latest/OHBM2026_Educational_course_harmonization/.venv/lib/python3.12/site-packages/statsmodels/regression/mixed_linear_model.py:1634: UserWarning: Random effects covariance is singular
-      warnings.warn(msg)
 
 
 .. parsed-literal::

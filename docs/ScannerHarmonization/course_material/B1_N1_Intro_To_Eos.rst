@@ -86,20 +86,9 @@ As you inspect the scans, think carefully about the following:
 These observations will motivate the later statistical analyses in the
 notebook.
 
-.. code:: ipython3
 
-    from block1_utils.ImageViewerBlock1 import MRIImageViewer
-    import matplotlib.pyplot as plt 
-    import pathlib
-    
-    # 1. Display the example data from one subject in two different sessions using the provided viewer:
-
-    # Load the images, they are converted to arrays for ease within the MRIimage viewer class
-    img1 = DATA_DIR / "Philips.nii"
-    img2 = DATA_DIR / "GE.nii"
-    
-    viewer1 = MRIImageViewer(img1, img2)
-    viewer1.show()
+We first display the example data from one subject in two different sessions using the MRIImageViewer (`original repository <https://github.com/N-Nieto/OHBM2026_Educational_course_harmonization/tree/main>`_). 
+The viewer allows you to scroll through the images in three orthogonal planes (axial, sagittal, and coronal) and compare the scans side by side.
 
 .. image:: images/B1_N1_Intro_To_Eos_Axial.png
 
@@ -122,26 +111,7 @@ as plots.
 
 -  Number of non-zero voxels
 
-See if there is a difference when using the registered image vs the raw
-image.
-
-Additionally, try and answer these questions:
-
--  What can the intensity histograms tell us and is there anyway to make
-   them more informative?
-
--  What can the total number of non-zero voxels tell us?
-
-.. code:: ipython3
-
-    from block1_utils.ImageStatsBlock1 import IntensityHistogram
-    from block1_utils.ImageStatsBlock1 import NonZeroVoxelCount
-    
-    # Count the number of non-zero voxels in each image, divide by total number of voxels to get the percentage of non-zero voxels, and print the results.
-    NonZeroVoxelCount(img1, img2)
-    
-    # Plot the distribution of intensities
-    IntensityHistogram(img1, img2)
+See if there is a difference when using the registered image vs the raw image.
 
 
 .. parsed-literal::
@@ -179,19 +149,10 @@ These measurements are often referred to as Imaging-Derived Phenotypes
 in a more meaningful way. The full processing of this data is described
 in the ON-Harmony dataset and we only use the IDPs here;
 
--  Looking at the data and the relative size of the bars, make some
-   notes in things you notice
 
-.. code:: ipython3
-
-    # Comparing the IDPs from FSL-FIRST of different ROIs across the two sessions, and plotting the results.
-    from block1_utils.ImageStatsBlock1 import compareIDPs
-    compareIDPs(DATA_DIR / "ON_Harmony_example_IDPs.csv")
-
+Comparing the IDPs from FSL-FIRST of different ROIs across the two sessions, and plotting the results we observe
 
 
 .. image:: images/B1_N1_Intro_To_Eos_6_0.png
 
 
-There are a few things to notice about these measures, write some down
-and think about some reasons as why this might be the case

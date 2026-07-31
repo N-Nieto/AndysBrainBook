@@ -6,7 +6,6 @@ ComBat-based harmonisation using simulated cross-sectional multi-site
 imaging data.
 
 --------------
-
 Objectives
 ----------
 
@@ -85,27 +84,6 @@ After ComBat/neuroHarmonize harmonisation
 
 .. code:: ipython3
 
-    # If needed
-    # %pip install neuroHarmonize nibabel neuroCombat
-
-.. code:: ipython3
-
-    # Load packages
-    
-    import pandas as pd
-    
-    
-    from block2_utils.HarmonisationEvaluation_functions import (
-        simulate_cross_sectional_harmonization_data,
-    )
-    from block2_utils.HarmonisationEvaluation_plots import (
-        plot_additive_multiplicative_effects,
-    )
-    from block2_utils.HarmonisationEvaluation_plots import plot_before_after_by_site
-    from neuroHarmonize import harmonizationLearn
-
-.. code:: ipython3
-
     # Generate simulated data
     
     # Define known site effects
@@ -181,18 +159,13 @@ After ComBat/neuroHarmonize harmonisation
 .. code:: ipython3
 
     # Harmonise "Site/Batch" using regression
-    from block2_utils.HarmonisationEvaluation_functions import regression_harmonize_site
     
     features = [f"Feature_{i}" for i in range(1, n_features + 1)]
     
     df_harm, model_summary = regression_harmonize_site(
         df, feature_cols=features, site_col="Site", covariates=("Age", "Timepoint")
     )
-    print("==" * 40)
-    print("Model Summary")
-    print(model_summary)
-    print("==" * 40)
-    print(df_harm.head())
+
     plot_before_after_by_site(df_harm, features)
 
 
@@ -304,19 +277,6 @@ After ComBat/neuroHarmonize harmonisation
 
 
 .. code:: ipython3
-
-    import warnings
-    warnings.filterwarnings("ignore")
-    
-    import pandas as pd
-    
-    from block2_utils.HarmonisationEvaluation_functions import (
-        simulate_cross_sectional_harmonization_data,
-        AdditiveEffect_long,
-        MultiplicativeEffect_long,
-        regression_harmonize_site,
-    )
-    from block2_utils.HarmonisationEvaluation_plots import plot_before_after_by_site
     
     ######## Simulate new data ########
     n_subjects=100

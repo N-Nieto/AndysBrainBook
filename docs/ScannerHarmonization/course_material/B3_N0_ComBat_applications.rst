@@ -21,25 +21,12 @@ Where:
 Here, we will simulate some data as we did in section 1 and apply ComBat
 to it in order to see how it works and how well it does.
 
-Try playing around with each of the batch (sites) characteristics to see
+We can play around with each of the batch (sites) characteristics to see
 how confounding between age, sex or other variables may effect
 harmonisation ad estimation of the batch effect.
 
-.. code:: ipython3
 
-    from block03_utils.SimulateDataBlock3 import make_simulator_input_gui
-    import matplotlib.pyplot as plt 
-    import pathlib
-    _ = make_simulator_input_gui()
-
-
-
-.. parsed-literal::
-
-    VBox(children=(HTML(value='<h3>Simulator input builder</h3>'), HTML(value='<b>Global settings</b>'), GridBox(c…
-
-
-After clicking done, you are left with the following variables:
+We work with the following variables:
 
 -  data -> :math:`y_{ij}`
 -  covariates -> :math:`X_i`, the subjects :math:`\times` covariate
@@ -63,16 +50,6 @@ You might want to create two dataframes here with the same covariate
 effects but with and without a batch effect for easier comparisson
 
 .. code:: ipython3
-
-    # Store the data from the simulator as a dataframe 
-    data =[]
-    params = make_simulator_input_gui.last_result
-    data = params["data"]
-    batch = params["batch"]
-    covariate_specs = params["covariate_specs"]
-    betas = params["betas"]
-    batch_params = params["batch_params"]
-    from block03_utils.SimulateDataBlock3 import simulate_batched_data
     
     df = simulate_batched_data(
         data=data,
@@ -82,40 +59,15 @@ effects but with and without a batch effect for easier comparisson
         noise_sd=1.0,
         seed=123,
     )
-    
-    # You can also change the batch parameters here by removing the qoutes and changing the values
-    
-    from block03_utils.PlottingBlock3 import plot_charts, plot_age_percentile_chart
-    
-    fig = plot_charts(df, ["age", "height", "weight"], batch_col="batch", outcome_col="y")
-    
-    # Also show the age nomogram:
-    
-    fig, ax = plot_age_percentile_chart(
-        df,
-        age_col="age",
-        value_col="y",
-        batch_col="batch",
-        n_bins=25,
-        smooth_frac=0.25,
-        show_points=True,
-        show_batch_coloring=True,
-    )
-    
-    plt.show()
-
-
 
 .. image:: images/B3_N0_ComBat_applications_3_0.png
-
-
 
 .. image:: images/B3_N0_ComBat_applications_3_1.png
 
 
 .. code:: ipython3
 
-    # If you have defined a batch effect using the simulator, you can skip this block
+    # Adding batch effects 
     
     batch_params = {
         "Batch1": {"add_mean": 0, "add_sd": 0.05, "multi_mean": 0.5, "multi_shape": 25.0},
@@ -160,12 +112,6 @@ them with the true simulated values.
 This version has been installed locally in the block03_utils:
 
 .. code:: ipython3
-
-    # Load the module
-    
-    from block03_utils.B03_ComBat import combat
-    from block03_utils.SimulateDataBlock3 import simulate_batched_data2
-    import numpy as np
     # ComBat needs more than one column in order to run so we will create some additional columns that are just random noise for the purpose of demonstrating ComBat. 
     # In a real dataset you would have multiple features that you want to harmonise, but for this example we will just create some random noise columns.
     
@@ -179,7 +125,6 @@ This version has been installed locally in the block03_utils:
         batch_params=batch_params,
         seed=123,
     )
-    
     
     df = sim["df"]
     y = sim["y"]          # shape (n, 3)
@@ -276,8 +221,6 @@ We will do this three ways:
 
     # Batch histograms:
     
-    from block03_utils.PlottingBlock3 import plot_combat_before_after
-    
     plot_combat_before_after(
         y_before=data,
         y_after=bayesdata,
@@ -287,12 +230,7 @@ We will do this three ways:
         bins=50,
     )
 
-
-
-
 .. image:: images/B3_N0_ComBat_applications_9_0.png
-
-
 
 .. image:: images/B3_N0_ComBat_applications_9_1.png
 
@@ -308,8 +246,6 @@ Here, distinct batch clusters by batch can be a sign of residual batch
 effects.
 
 .. code:: ipython3
-
-    from block03_utils.PlottingBlock3 import plot_pca_before_after
     result = plot_pca_before_after(
         y_before=data,
         y_after=bayesdata,
