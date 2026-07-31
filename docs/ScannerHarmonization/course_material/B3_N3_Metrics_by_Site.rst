@@ -1,4 +1,4 @@
-# Discover biases in metrics by site
+Discover biases in metrics by site
 ------------------------------------
 
 While dealing with multisite data, we need to be careful when reporting our metrics.
