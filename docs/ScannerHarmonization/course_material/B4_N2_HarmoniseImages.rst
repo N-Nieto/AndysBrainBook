@@ -59,10 +59,6 @@ Histogram matching can improve consistency of image intensity
 distributions, but it does not guarantee biologically accurate or
 unbiased downstream measurements.
 
-.. code:: ipython3
-
-    # install packages if not done already
-    %pip install antspyx nibabel
 
 Step 1: Inspect the original images
 -----------------------------------

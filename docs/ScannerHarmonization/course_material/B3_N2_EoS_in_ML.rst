@@ -1,4 +1,4 @@
-# Impact of *Effects of Site* in Machine Learning Pipelines
+Impact of *Effects of Site* in Machine Learning Pipelines
 ---------------------------------------------------------
 
 The effects of site (EoS) can have two opposite effects on Machine
@@ -211,11 +211,6 @@ What to expect?
 Now the sites (colors) are easier to distinguish. Each feature is affected differently in each site.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Exercise
-~~~~~~~~
-
-Change the value of the effect of site to check how the model behaves in more extreme cases.
---------------------------------------------------------------------------------------------
 
 Section 3. Add site-class imbalance.
 ------------------------------------
@@ -446,25 +441,13 @@ What to expect?
 
    output image 25-0
 
-Take-away message.
+EoS in ML: Noise or Signal?
 ~~~~~~~~~~~~~~~~~~
 
--  EoS can have a different effect in our ML analysis. A good first step
-   is to check how the class imbalance is across sites.
--  This example aims to showcase the basic possibilities. Real-world
-   problems are much messier, with multiple sites, heterogeneous
-   imbalances, more complex site-level effects, more features, and fewer
-   subjects.
+Effect of Site (EoS) is typically dismissed as nuisance variation—batch effects, instrument drift, or demographic differences we'd rather ignore. But from a machine learning perspective, EoS isn't always noise. Sometimes it's signal.
 
-Question
-~~~~~~~~
+The critical factor is class imbalance across sites. When target labels are unevenly distributed between sites, EoS becomes confounded with the true outcome. The model doesn't learn the pattern you want, it learns which site the sample came from. Performance appears strong, but it's an artifact. The model is cheating.
 
--  After harmonizing our data, how could we distinguish if the
-   harmonization model removed only the EoS signal, or it has only
-   removed the real signal confounded with the sites?
+This isn't a bug in the algorithm; it's a failure in experimental design. If site predicts class better than your features do, the model will exploit that shortcut every time.
 
-Solution
-~~~~~~~~
-
-You can check the solutions of this notebook
-`here <https://github.com/N-Nieto/OHBM2026_Educational_course_harmonization/tree/main/solutions/block03>`__
+The takeaway: before trusting cross-site performance, check the label distribution per site. Balanced sites reduce confounding. Imbalanced sites demand careful stratification or site-aware modeling. Otherwise, your "generalizable" model may just be memorizing the map.

@@ -1,4 +1,4 @@
-# Discover biases in metrics by site
+Discover biases in metrics by site
 ------------------------------------
 
 While dealing with multisite data, we need to be careful when reporting our metrics.
@@ -145,91 +145,27 @@ Looking at the overall metric, the obtained performance is very similar.
 ------------------------------------------------------------------------
 Now, let's explore the performance obtained in each of the sites.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. code:: python
-    sites_unique = np.unique(sites)
-
-    # Visualize both scenarios
-    fig, axes = plt.subplots(1, 2, figsize=(15, 6))
-
-    # Scenario 1
-    site_scores_s1 = [metric_s1[metric_to_plot][s] for s in sites_unique]
-
-    sns.barplot(
-        x=sites_unique,
-        y=site_scores_s1,
-        color="steelblue",
-        label="Site Scores",
-        ax=axes[0],
-    )
-    axes[0].axhline(
-        metric_global_s1,
-        color="black",
-        linestyle="--",
-        label=f"Global: {metric_global_s1:.3f}",
-    )
-    axes[0].axhline(
-        0.5,
-        color="red",
-        linestyle="--",
-        alpha=0.7,
-        label="Chance level: 0.5",
-    )
-    axes[0].set_xlabel("Site")
-    axes[0].set_ylabel(metric_to_plot)
-    axes[0].set_title("Scenario 1: Good Overall, One Site Fails")
-    axes[0].legend()
-    axes[0].grid(True, alpha=1, axis="y")
-    axes[0].set_ylim([0, 1])
-
-    # Scenario 2
-    site_scores_s2 = [metric_s2[metric_to_plot][s] for s in sites_unique]
-    sns.barplot(
-        x=sites_unique,
-        y=site_scores_s2,
-        color="coral",
-        label="Site Scores",
-        ax=axes[1],
-    )
-    axes[1].axhline(
-        metric_global_s2,
-        color="black",
-        linestyle="--",
-        label=f"Global: {metric_global_s2:.3f}",
-    )
-    axes[1].axhline(
-        0.5,
-        color="red",
-        linestyle="--",
-        alpha=0.7,
-        label="Chance level: 0.5",
-    )
-    axes[1].set_xlabel("Site")
-    axes[1].set_ylabel(metric_to_plot)
-    axes[1].set_title("Scenario 2: Bad Overall, One Site Excels")
-    axes[1].legend()
-    axes[1].set_ylim([0, 1])
-
-    plt.tight_layout()
-    plt.show()
+We will plot the performance obtained in each site for both scenarios, and we will also include the overall performance as a dashed line.
 
 .. figure:: images/B3_N3_Metrics_by_Site_im1.png
-   :alt: output image 1-0
 
-   output image 1-0
 
 As expected, the performance of the **bad** sites is near to chance.
 --------------------------------------------------------------------
 
-Question
-~~~~~~~~
 
-- How is it possible that they have a similar overall performance?
-- In this example, no EoS were simulated. What do you think could happen if different EoS are presented in different sites?
+Questions:
 
-Solution
-~~~~~~~~
+--------------------------------------------------------------------
 
-You can check the solutions of this notebook `here <https://github.com/N-Nieto/OHBM2026_Educational_course_harmonization/tree/main/solutions/block03>`__.
+- How is it possible that they have an similar overall performance? Where is the catch?
 
+The performance obtained in each site is not comparable because they have different number of samples!
 
+In the first scenario, the bad site is 3 times bigger than the good sites and vice versa for the second scenario.
+
+If we had only reported the overall performance, we would not be able to unravel the model's behavior.
+
+- In this example, no Eos was used simulated in any of our sites. What do you think it could happen if different EoS are presented in different sites?
+
+As we saw before, it will depend not only on the EoS but also in the site class imbalance. If the EoS acts as noise, the presence of EoS will create noisier sites, which could act as "bad" sites. If we have a big site class imbalance, and for example combined with having one big site (for example with healthy control) and many small sites with patients, the model will only learn the particular EoS of that site. In the extreme case, classifying the site  will be the same as classify the target, from the model's perspective. 

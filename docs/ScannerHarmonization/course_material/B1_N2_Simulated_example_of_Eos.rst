@@ -52,82 +52,9 @@ the resulting histograms.
 -  Which variables might act as confounds?
 -  What happens if site and biological variables become correlated?
 
-.. code:: ipython3
-
-    from block1_utils.SimulateDataBlock1 import make_simulator_input_gui
-    import matplotlib.pyplot as plt 
-    import pathlib
-    _ = make_simulator_input_gui()
-
-
-
-.. parsed-literal::
-
-    VBox(children=(HTML(value='<h3>Simulator input builder</h3>'), HTML(value='<b>Global settings</b>'), GridBox(c…
-
-
-.. code:: ipython3
-
-    from block1_utils.SimulateDataBlock1 import simulate_batched_data
-    
-    data =[]
-    params = make_simulator_input_gui.last_result
-    data = params["data"]
-    batch = params["batch"]
-    covariate_specs = params["covariate_specs"]
-    betas = params["betas"]
-    batch_params = params["batch_params"]
-    
-    df = simulate_batched_data(
-        data=data,
-        batch=batch,
-        covariate_specs=covariate_specs,
-        betas=betas,
-        noise_sd=1.0,
-        seed=123,
-    )
-    df.head()
-    
-    plt.figure(figsize=(8, 4))
-    for b in df["batch"].unique():
-        plt.hist(df.loc[df["batch"] == b, "y"], bins=30, alpha=0.5, label=b)
-    plt.legend()
-    plt.title("Outcome distribution by batch")
-    plt.xlabel("y")
-    plt.ylabel("Count")
-    plt.show()
-
-
-
 .. image:: images/B1_N2_Simulated_example_of_Eos_2_0.png
 
-
-.. code:: ipython3
-
-    from block1_utils.PlottingBlock1 import plot_charts, plot_age_percentile_chart
-    
-    fig = plot_charts(df, ["age", "height", "weight"], batch_col="batch", outcome_col="y")
-    
-    # Also show the age nomogram:
-    
-    fig, ax = plot_age_percentile_chart(
-        df,
-        age_col="age",
-        value_col="y",
-        batch_col="batch",
-        n_bins=25,
-        smooth_frac=0.25,
-        show_points=True,
-        show_batch_coloring=True,
-    )
-    
-    plt.show()
-
-
-
 .. image:: images/B1_N2_Simulated_example_of_Eos_3_0.png
-
-
 
 .. image:: images/B1_N2_Simulated_example_of_Eos_3_1.png
 
@@ -176,8 +103,6 @@ As you explore the simulations, think carefully about:
 -  How difficult would it be to separate these effects in a real study?
 
 .. code:: ipython3
-
-    from block1_utils.SimulateDataBlock1 import simulate_batched_data
     
     # Add some batch effects to the data and see how they impact the distribution of the outcome variable. 
     # We will simulate data with 3 batches, each with different covariate distributions and batch effects.
@@ -197,18 +122,6 @@ As you explore the simulations, think carefully about:
         relative_batch_effects=True,
         seed=42,
     )
-    
-    plt.figure(figsize=(8, 4))
-    for b in df2["batch"].unique():
-        plt.hist(df2.loc[df2["batch"] == b, "y"], bins=30, alpha=0.5, label=b)
-    plt.legend()
-    plt.title("Outcome distribution by batch")
-    plt.xlabel("y")
-    plt.ylabel("Count")
-    plt.show()
-
-
-
 
 .. image:: images/B1_N2_Simulated_example_of_Eos_5_0.png
 
@@ -230,22 +143,6 @@ This is one of the central challenges of multi-site neuroimaging. Even
 relatively small scanner effects can distort normative trajectories,
 bias machine learning models, reduce reproducibility and produce
 spurious findings.
-
-.. code:: ipython3
-
-    from block1_utils.PlottingBlock1 import plot_charts
-    fig = plot_charts(df2, ["age", "height", "weight"], batch_col="batch", outcome_col="y")
-    
-    fig, ax = plot_age_percentile_chart(
-        df2,
-        age_col="age",
-        value_col="y",
-        batch_col="batch",
-        n_bins=25,
-        smooth_frac=0.25,
-        show_points=True,
-        show_batch_coloring=True,
-    )
 
 
 

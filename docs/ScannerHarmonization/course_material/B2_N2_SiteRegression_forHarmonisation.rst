@@ -118,13 +118,6 @@ to model and remove both:
 
 .. code:: ipython3
 
-    from block2_utils.HarmonisationEvaluation_functions import (
-        simulate_longitudinal_batch_data_mixed,
-    )
-    from block2_utils.HarmonisationEvaluation_plots import (
-        plot_additive_multiplicative_effects,
-    )
-
     # Simulate 100 subjects, 3 timepoints, 2 sites, 4 features
     n_subjects = 100
     n_timepoints = 3
@@ -170,23 +163,11 @@ to model and remove both:
 
 .. code:: ipython3
 
-    from block2_utils.HarmonisationEvaluation_functions import regression_harmonize_site
-    from block2_utils.HarmonisationEvaluation_plots import plot_before_after_by_site
-
-
     feature_cols = [f"Feature_{i}" for i in range(1, n_features + 1)]
 
     df_harm, model_summary = regression_harmonize_site(
         df, feature_cols=feature_cols, site_col="Site", covariates=("Age", "Timepoint")
     )
-    print("==" * 40)
-    print("Model Summary")
-    print("==" * 40)
-    print(model_summary)
-    print("==" * 40)
-    print(df_harm.head())
-    print("==" * 40)
-    plot_before_after_by_site(df_harm, feature_cols)
 
 
 .. parsed-literal::
@@ -281,70 +262,8 @@ Then:
 3. Visualize the harmonized data.
 4. Re-run additive and multiplicative effect tests.
 
-Questions
-~~~~~~~~~
-
-- Which site effects were reduced after regression harmonisation?
-- Which effects still remained?
-- Why might regression be insufficient for multiplicative batch effects?
-- How could ComBat-like methods improve upon this?
-
-Solution
-~~~~~~~~
-
-You can check the solution code in
-`here <https://github.com/N-Nieto/OHBM2026_Educational_course_harmonization/tree/main/solutions/block02>`__.
-
-Before applying site regression
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Prior to harmonisation, the additive batch effect analysis identified
-statistically significant site-related shifts in mean feature values for
-``Feature_1`` and ``Feature_3``, indicating the presence of additive
-scanner/site effects.
-
-In contrast, the multiplicative batch effect analysis using the Fligner
-test demonstrated significant site-related differences in variance for
-``Feature_2`` and ``Feature_4``, consistent with multiplicative batch
-effects affecting measurement variability across sites.
-
-These findings indicate that the simulated dataset contains both
-additive and multiplicative sources of scanner/site bias.
-
-After applying site harmonisation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Following regression-based site harmonisation, the additive batch effect
-for ``Feature_1`` was no longer statistically significant
-(``p > 0.05``), suggesting that the regression approach successfully
-reduced the corresponding site-related mean shift.
-
-However, residual additive effects remained evident for ``Feature_3``,
-indicating incomplete removal of site-related bias for this feature.
-
-Importantly, the harmonisation approach did not substantially reduce the
-multiplicative batch effects observed for ``Feature_2`` and
-``Feature_4``, as the variance-related site differences remained
-statistically significant before and after harmonisation.
-
-Overall, these results illustrate that standard regression-based
-harmonisation approaches are generally effective for correcting additive
-mean shifts, but may be insufficient for addressing multiplicative
-effects that primarily influence feature variance.
 
 .. code:: ipython3
-
-    # Exercise solution:
-
-    import warnings
-    warnings.filterwarnings("ignore")
-
-    from block2_utils.HarmonisationEvaluation_functions import simulate_longitudinal_batch_data_mixed
-    #from block2_utils.HarmonisationEvaluation_plots import plot_additive_multiplicative_effects
-    from block2_utils.HarmonisationEvaluation_functions import AdditiveEffect_long
-    from block2_utils.HarmonisationEvaluation_functions import MultiplicativeEffect_long
-    from block2_utils.HarmonisationEvaluation_functions import regression_harmonize_site
-    from block2_utils.HarmonisationEvaluation_plots import plot_before_after_by_site
 
     # Let's simulate some data: 100 subjects, 3 timepoints, 2 sites, features from 4 brain regions
     n_subjects = 100
@@ -364,11 +283,7 @@ effects that primarily influence feature variance.
         seed=1,
     )
 
-    #print(df.head(10))
     feature_cols = [f"Feature_{i}" for i in range(1, n_features + 1)]
-
-    # Let's visualise additive and multiplicative effects
-    #plot_additive_multiplicative_effects(df, feature_cols=feature_cols, batch_col="Site")
 
     feature_cols = [f"Feature_{i}" for i in range(1, n_features + 1)]
 
@@ -485,3 +400,41 @@ effects that primarily influence feature variance.
 
 
 .. image:: images/B2_N2_SiteRegression_forHarmonisation_Solutions_6_4.png
+
+
+Before applying site regression
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Prior to harmonisation, the additive batch effect analysis identified
+statistically significant site-related shifts in mean feature values for
+``Feature_1`` and ``Feature_3``, indicating the presence of additive
+scanner/site effects.
+
+In contrast, the multiplicative batch effect analysis using the Fligner
+test demonstrated significant site-related differences in variance for
+``Feature_2`` and ``Feature_4``, consistent with multiplicative batch
+effects affecting measurement variability across sites.
+
+These findings indicate that the simulated dataset contains both
+additive and multiplicative sources of scanner/site bias.
+
+After applying site harmonisation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Following regression-based site harmonisation, the additive batch effect
+for ``Feature_1`` was no longer statistically significant
+(``p > 0.05``), suggesting that the regression approach successfully
+reduced the corresponding site-related mean shift.
+
+However, residual additive effects remained evident for ``Feature_3``,
+indicating incomplete removal of site-related bias for this feature.
+
+Importantly, the harmonisation approach did not substantially reduce the
+multiplicative batch effects observed for ``Feature_2`` and
+``Feature_4``, as the variance-related site differences remained
+statistically significant before and after harmonisation.
+
+Overall, these results illustrate that standard regression-based
+harmonisation approaches are generally effective for correcting additive
+mean shifts, but may be insufficient for addressing multiplicative
+effects that primarily influence feature variance.

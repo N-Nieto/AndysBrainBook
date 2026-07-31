@@ -192,9 +192,6 @@ Now plot the results
    plt.tight_layout()
 
 .. figure:: images/B3_ComBat_in_imbalance_classes_N4_im1.png
-   :alt: output image 9-0
-
-   output image 9-0
 
 Take-home message
 ~~~~~~~~~~~~~~~~~
