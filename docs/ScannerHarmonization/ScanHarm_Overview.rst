@@ -30,10 +30,60 @@ Course Structure
 -------------------
 The course is divided into four main blocks, each focusing on a specific aspect of harmonization:  
 
-- **Block 1 (B1): Effects of Site Introduction**  
+- **Block 1 (B1): Effects of Site Introduction** 
+
+The first step in any harmonization journey is to see the problem.
+In this block, we open with real images and tangible examples to build an intuitive understanding of what site effects actually look like in practice.
+
+We will ask—and answer—the questions that motivate everything that follows:
+
+- What exactly is an Effect of Site, and where does it come from?
+- If we scan the same brain on two different scanners, can we see the difference with the naked eye?
+- How do these scanner-driven differences alter the distributions and statistical properties of the data?
+- And, most importantly: do we truly need harmonization, or can we simply ignore the problem?
+
+By the end of this block, you will have a concrete sense of why site effects matter and why harmonization is not merely a preprocessing nicety, but a scientific necessity.
+
+
 - **Block 2 (B2): Harmonization Evaluation**
+
+Once you know site effects exist, the next task is to measure them. In this block we shift from intuition to quantification, learning how to diagnose the severity of site-related bias in a dataset and how to judge whether a harmonization method has actually worked.
+
+We will tackle questions such as:
+
+- Is it possible to put a number on the effect of site?
+- How deeply is my data contaminated by scanner-driven variance?
+- Is there a single metric that tells me everything I need to know, or do we need a panel of complementary checks?
+
+You will learn to think like a diagnostician: assessing damage before treatment, and validating improvement after it.
+
+
 - **Block 3 (B3): Location-Scale Methods: ComBat Applications**
+
+ComBat is the workhorse of neuroimaging harmonization, and this block is its deep-dive manual. We will move from the underlying mathematics to the practical assumptions, from celebrated successes to well-documented limitations
+Because ComBat has inspired an entire family of location-scale methods, we will also survey its most important descendants—ComBat-GAM, CovBat, and others—and examine how each addresses a specific shortcoming of the original.
+Throughout this block, we will keep a special eye on the machine-learning context, where harmonization must coexist with cross-validation and generalization.
+
+Key questions include:
+
+- What is the mathematical logic behind ComBat?
+- What assumptions does it make about the data, and what happens when those assumptions are violated?
+- Can ComBat be applied universally, or are there situations where it should be avoided?
+- How does class imbalance across sites distort ComBat's behavior in statistical analysis?
+- How can ComBat be integrated safely into a machine-learning pipeline without leaking information?
+
+By the end of this block, you will be able to wield ComBat—and its relatives—with both confidence and caution.
+
 - **Block 4 (B4): Alternatives & Future Directions**
+
+ComBat is not the end of the story. In this final block, we look beyond location-scale methods to emerging techniques that treat site effects in fundamentally different ways.
+We will explore whether every image from the same scanner truly shares an identical bias, and we will introduce powerful alternatives that challenge the one-size-fits-all assumption.
+From image-quality-metric harmonization and direct image synthesis to normative modeling and deep-learning approaches, this block maps the frontier of the field and points toward the tools you may be using tomorrow.
+
+Key questions include:
+
+Does all the images from the same site has the same effect of site?
+
 
 .. toctree::
    :maxdepth: 1
@@ -48,10 +98,10 @@ The course is divided into four main blocks, each focusing on a specific aspect 
    course_material/B3_N1_ComBat_limitations
    course_material/B3_N2_EoS_in_ML
    course_material/B3_N3_Metrics_by_Site
-   course_material/B3_N4_ComBat_in_imbalance_classes
-   course_material/B4_N1_IQM-harmonisation_light
+   course_material/B3_N4_ComBat_in_Imbalance_Classes
+   course_material/B4_N1_IQM-Harmonisation_Light
    course_material/B4_N2_HarmoniseImages
-   course_material/B4_N3_normative_modelling
+   course_material/B4_N3_Normative_Modelling
    
 
 Acknowledgement
