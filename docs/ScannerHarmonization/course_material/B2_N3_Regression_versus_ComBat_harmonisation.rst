@@ -194,6 +194,7 @@ After ComBat/neuroHarmonize harmonisation
     4     1126.036562     1682.454464     2097.451721     2281.663019  
 
 
+The figures illustrate the feature distributions across sites before and after harmonisation. Before harmonisation, site effects can appear as **additive effects**, reflected by shifts in the mean/median between sites, and **multiplicative effects**, reflected by differences in the spread or variance of the distributions. Harmonisation corrects for both effects: the site-specific means are brought into closer alignment, while differences in variance are also adjusted. Consequently, after harmonisation, the feature distributions across sites become more comparable in both their central tendency and spread.
 
 .. image:: images/B2_N3_Regression_versus_ComBat_harmonisation_Solutions_4_1.png
 
