@@ -98,8 +98,7 @@ folder contains:
 Arguments to the Harmonisation Function
 ---------------------------------------
 
-We will use the ``iqm_harmonise`` function from
-``iqm_harmonisation_light.py``. We recommend reviewing both the
+We will use the ``iqm_harmonise`` function from provided in [`iqm_harmonisation_light.py`](https://github.com/gvbhalerao591/Harmonisation-Paper/blob/main/harmonisation_methods/IQM_approach/flexible_implementation_python/iqm_harmonisation_light.py).We recommend reviewing both the
 implementation and the inline documentation describing the function
 arguments before applying the workflow to your own datasets.
 
